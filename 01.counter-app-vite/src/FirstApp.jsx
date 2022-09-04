@@ -1,26 +1,26 @@
-// si no se cambia el valor y no se tiene relación con ningun hook, conviene ponerlo por fuera del compoente funcional
-// no se pueden pasar objetos para renderizar
-const newMessage = {
-  message: 'Bienvenido',
-  name: 'Fernando'
-}
+import PropTypes from 'prop-types';
 
-const getGreeting = (nombre, mensaje) => {
-  return `${mensaje} ${nombre}`
-}
-
-const FirstApp = () => {
-
-  
+// const FirstApp = (props) => {
+  //   const titulo = props.titulo;
+const FirstApp = ({ titulo, texto }) => {
   
   return (
     <>
-    {/* <code>{ JSON.stringify( newMessage ) }</code> */}
-      <h1>{ getGreeting(newMessage.name, newMessage.message) }</h1>
-      <h2>Soy un subtitulo</h2>
+      <h1>{ titulo }</h1>
+      <p>{ texto }</p>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Illo, error esse labore magnam possimus est quo. Minima amet maxime, veniam ducimus molestiae et rerum, blanditiis, ipsam accusantium nesciunt id officia.</p>
     </>
   )
+}
+
+FirstApp.propTypes = {
+  titulo: PropTypes.string.isRequired,
+  texto: PropTypes.string
+}
+
+FirstApp.defaultProps = {
+  titulo: 'Titulo por default',
+  texto: 'Texto por defaultProps'
 }
 
 export default FirstApp
