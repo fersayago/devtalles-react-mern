@@ -7,7 +7,7 @@ describe('pruebas en 11-async-await', () => {
         
         const resp = await getImagen();
         // expect( typeof url ).toBe('string');
-        expect( resp ).toBe('No se encontro la imagen');
+        expect( resp ).toContain('giphy.com/media/');
 
     });
 });
