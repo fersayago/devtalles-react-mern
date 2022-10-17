@@ -8,10 +8,23 @@ describe('Pruebas en <FirstApp />', () => {
     // algo llega a cambiar, la comparación falla
 
     // renderiza el componente en memoria
-
     const title = 'Titulo desde test'
-    render( <FirstApp title={ title} /> )
 
+    const { container } = render( <FirstApp title={ title } /> )
+    expect( container ).toMatchSnapshot();
     
+  })
+
+  test('title en h1', () => {
+    // se debe mostrar el titulo en h1 en el snapshot
+
+    // primer revisamos que renderice el titulo
+    const title= 'Titulo a evaluar'
+    const { container, getByText } = render (<FirstApp title={ title }/>)
+    expect( getByText(title) ).toBeTruthy()
+
+    // buscamos el elemento con querySelector y nos fijamos que contenga el titulo a buscar
+    const h1 = container.querySelector('h1')
+    expect(h1.innerHTML).toContain(title)
   })
 })
