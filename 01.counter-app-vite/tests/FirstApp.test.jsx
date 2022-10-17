@@ -40,7 +40,5 @@ describe('Pruebas en <FirstApp />', () => {
     
     // nos fijamos que renderice el subtitulo
     expect( getAllByText(testSubtitle).length ).toBe(2);
-
-    expect
   })
 })
