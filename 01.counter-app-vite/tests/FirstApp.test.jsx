@@ -1,4 +1,4 @@
-import { render } from "@testing-library/react"
+import { getByTestId, render } from "@testing-library/react"
 import { FirstApp } from "../src/FirstApp"
 
 describe('Pruebas en <FirstApp />', () => {
@@ -20,11 +20,27 @@ describe('Pruebas en <FirstApp />', () => {
 
     // primer revisamos que renderice el titulo
     const title= 'Titulo a evaluar'
-    const { container, getByText } = render (<FirstApp title={ title }/>)
+    const { container, getByText, getByTestId } = render (<FirstApp title={ title }/>)
     expect( getByText(title) ).toBeTruthy()
 
-    // buscamos el elemento con querySelector y nos fijamos que contenga el titulo a buscar
-    const h1 = container.querySelector('h1')
-    expect(h1.innerHTML).toContain(title)
+    // // buscamos el elemento con querySelector y nos fijamos que contenga el titulo a buscar
+    // const h1 = container.querySelector('h1')
+    // expect(h1.innerHTML).toContain(title)
+
+    // buscamos el titulo mediante el testId en caso de que no este en H1
+    expect( getByTestId('test-title').innerHTML ).toContain(title);
+  })
+
+  test('Debe mostrar el subtitulo pasado por props', () => {
+    const title = 'Titulo por test'
+    const testSubtitle = 'Subtitulo por test'
+    const { getAllByText } = render (
+      <FirstApp title={ title } subTitle={ testSubtitle }/>
+    )
+    
+    // nos fijamos que renderice el subtitulo
+    expect( getAllByText(testSubtitle).length ).toBe(2);
+
+    expect
   })
 })
