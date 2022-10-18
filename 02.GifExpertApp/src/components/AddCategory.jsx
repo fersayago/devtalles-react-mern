@@ -1,11 +1,16 @@
 import { useState } from 'react'
 
-const AddCategory = () => {
+const AddCategory = ({ setCategories }) => {
 
-  const [ inputValue, setInputValue ] = useState('House of the Dragon')
+  const [ inputValue, setInputValue ] = useState('')
 
+  // al apretar el boton corroboramos que el inputValue tenga valor
+  // y una vez agregado al estado de categorias, vaciamos el input
   const onSubmit = (event) => {
     event.preventDefault()
+    inputValue !== '' &&
+    setCategories(event => [ inputValue, ...event ])
+    setInputValue('');
   }
 
   const onInputChange = (event) => {

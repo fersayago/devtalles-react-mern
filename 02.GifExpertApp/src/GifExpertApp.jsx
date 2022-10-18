@@ -11,11 +11,11 @@ const GifExpertApp = () => {
 
   return (
     <>
-      {/* Titulos */}
+    
       <h1>GifExpertApp</h1>
-      <AddCategory />
-      {/* Input */}
-      {/* Listado de Gif */}
+      <AddCategory setCategories={ setCategories } />
+
+
       <ol>
         {
           categories.map((category) => {
@@ -23,7 +23,6 @@ const GifExpertApp = () => {
           })
         }
       </ol>
-        {/* Gif Item */}
     </>
   )
 }
