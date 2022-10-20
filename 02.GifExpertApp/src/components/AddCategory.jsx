@@ -9,7 +9,6 @@ const AddCategory = ({ onNewCategory }) => {
   const onSubmit = (event) => {
     event.preventDefault()
     inputValue !== '' &&
-    // setCategories( state => [inputValue, ...state])
     onNewCategory(inputValue.trim())
     setInputValue('');
   }
@@ -27,8 +26,6 @@ const AddCategory = ({ onNewCategory }) => {
           value={ inputValue }
           onChange={ onInputChange }
         />
-
-        <button>Agregar</button>
       </form>
     </>
   )
