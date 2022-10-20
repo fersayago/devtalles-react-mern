@@ -1,5 +1,11 @@
+import { useEffect } from 'react'
+import fetchGifs from '../api/fetchGifs'
 
 const GifGrid = ({ category }) => {
+
+  useEffect(() => {
+    fetchGifs(category)
+  },[])
 
   return (
     <>
