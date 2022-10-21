@@ -78,3 +78,17 @@ Create React App permite crear un proyecto base de React usando webpack con una 
 - Simular eventos
 
 Esta sección de pruebas es sumamente importante porque nos dará la base de las pruebas que estaremos haciendo durante el curso, las pruebas irán creciendo en complejidad, por lo que les recomiendo que nos aseguremos de comprender bien todos estos conceptos para que nos sea más fácil las siguientes secciones de pruebas.
+
+# Sección 6: GifExpertApp
+**Puntos clave de la sección:**
+- Custom Hooks
+- Fetch hacia un AP
+- Comunicación entre componentes
+- Clases de CSS
+- Animaciones
+- Enviar métodos como argumentos
+- Crear listados
+- keys
+- Giphy
+
+Esta es una aplicación pequeña pero muy ilustrativa que explica cómo utilizar React + CustomHooks para poder ersolver necesidades en específico que podremos reutilizar después.
