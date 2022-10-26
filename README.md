@@ -92,3 +92,26 @@ Esta sección de pruebas es sumamente importante porque nos dará la base de las
 - Giphy
 
 Esta es una aplicación pequeña pero muy ilustrativa que explica cómo utilizar React + CustomHooks para poder ersolver necesidades en específico que podremos reutilizar después.
+
+# Sección 7: Generando el build de producción y despliegues
+**Puntos clave de la sección:**
+- Aprender cómo realizar backups a repositorios de Git
+- Subir nuestro repositorio a GitHub
+- Uso de Github Pages
+- Desplegar nuestra aplicación de React
+- Generar build de producción de nuestra aplicación
+
+Aunque es una sección pequeña, les puede servir para desplegar infinidad de proyectos de React de forma gratuita, sin contar que tendrán respaldos de sus proyectos por si llegan a perder su trabajo que tenían localmente en su computadora.
+
+# Sección 8: Testing - Probando la aplicación de GifExpert
+**Puntos clave de la sección:**
+- Seguir el camino de las pruebas
+- Pruebas en componentes específicos
+- Pruebas en componentes de forma individual
+- Pruebas con customHooks
+- Esperar cambios en un customHook
+- Simular eventos en inputs y formularios
+- Simular llamadas a funciones
+- Evaluar si existen elementos en el componente
+
+En esta sección seguiremos expandiendo todo lo que habíamos visto anteriormente en otras secciones de pruebas, pero ahora veremos más a detalle los temas y adicionalmente introduciremos nuevos conceptos y nuevos tipos de pruebas. Para orientarnos en la instalación de Jest y React testing library en el proyecto podemos usar [esta guia](https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177).
