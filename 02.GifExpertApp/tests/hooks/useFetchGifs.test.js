@@ -20,10 +20,7 @@ describe('Pruebas en hook useFetchGifs', () => {
     
     // espera a que las imagenes se reciban
     await waitFor(
-      () => expect( result.current.images. length ).toBeGreaterThan(0),
-      {
-        timeout: 3000
-      }
+      () => expect( result.current.images.length ).toBeGreaterThan(0)
     );
 
     const { images, isLoading } = result.current;

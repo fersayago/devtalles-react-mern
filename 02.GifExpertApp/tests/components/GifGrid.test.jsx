@@ -31,12 +31,12 @@ describe('Pruebas en <GifGrid />', () => {
         url: 'https://localhost/saitama.jpg'
       },
       {
-        id: 'ABC',
+        id: 'BCD',
         title: 'Goku',
         url: 'https://localhost/Goku.jpg'
       },
       {
-        id: 'ABC',
+        id: 'CDE',
         title: 'Luffy',
         url: 'https://localhost/Luffy.jpg'
       }
