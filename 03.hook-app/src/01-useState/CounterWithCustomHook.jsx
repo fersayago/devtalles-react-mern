@@ -2,15 +2,20 @@ import useCounter from "../hooks/useCounter";
 
 const CounterWithCustomHook = () => {
 
-  const { counter } = useCounter();
+  const {
+    counter,
+    incrementar,
+    decrementar,
+    reiniciar
+  } = useCounter();
 
   return (
     <>
       <h1>Counter with Hook: { counter }</h1>
 
-      <button className='btn btn-primary'>+1</button>
-      <button className='btn btn-primary'>Reset</button>
-      <button className='btn btn-primary'>-1</button>
+      <button className='btn btn-primary' onClick={ () => incrementar(2) }> +1 </button>
+      <button className='btn btn-primary' onClick={ reiniciar }> Reset </button>
+      <button className='btn btn-primary' onClick={ () => decrementar(2) }> -1 </button>
     </>
   )
 }
