@@ -19,7 +19,7 @@ const SimpleForm = () => {
 
   useEffect(() => {
     console.log('useEffect')
-  });
+  }, [email]);
 
   return (
     <>
