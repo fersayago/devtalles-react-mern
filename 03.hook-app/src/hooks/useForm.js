@@ -12,12 +12,17 @@ const useForm = ( initialForm = {} ) => {
     })
   }
 
+  const onResetForm = () => {
+    setFormState( initialForm )
+  }
+
 
   // podemos desestructurar el formstate mas facil si enviamos en el return los 3 campos por separado
   return {
     ...formState,
     formState,
-    onInputChange
+    onInputChange,
+    onResetForm
   }
 }
 

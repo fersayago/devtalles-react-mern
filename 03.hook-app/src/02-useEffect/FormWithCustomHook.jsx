@@ -8,7 +8,8 @@ const FormWithCustomHook = () => {
     email,
     password,
     formState,
-    onInputChange
+    onInputChange,
+    onResetForm
   } = useForm({
     username: '',
     email: '',
@@ -49,6 +50,13 @@ const FormWithCustomHook = () => {
         value={password}
         onChange={onInputChange}
       />
+
+      <div className='d-grid'>
+        <button
+          className='btn btn-primary mt-2'
+          onClick={onResetForm}
+        >Borrar</button>
+      </div>
 
       {
         username === 'usuarioExistente' &&
