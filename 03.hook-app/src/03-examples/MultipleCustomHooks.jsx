@@ -1,9 +1,16 @@
-import React from 'react'
+import useCounter from '../hooks/useCounter'
 import useFetch from '../hooks/useFetch'
 
 const MultipleCustomHooks = () => {
 
-  const {data, isLoading, hasError } = useFetch('https://www.breakingbadapi.com/api/quotes/1')
+  const {
+    counter,
+    incrementar,
+    decrementar,
+    reiniciar,
+  } = useCounter(1);
+
+  const {data, isLoading, hasError } = useFetch(`https://www.breakingbadapi.com/api/quotes/${ counter }`)
 
   const { author, quote } = !!data && data[0]
 
@@ -25,8 +32,28 @@ const MultipleCustomHooks = () => {
         )
       }
       
-      <button className='btn btn-primary'>
+      <button
+        disabled={ isLoading || counter <= 1 }
+        className='btn btn-primary'
+        onClick={ () => decrementar() } // si invocamos incrementar vamos a enviar el evento click mientras que la funcion espera un valor
+      >
+        Previous quote
+      </button>
+
+      <button
+        disabled={ isLoading }
+        className='btn btn-primary'
+        onClick={ () => incrementar() } // si invocamos incrementar vamos a enviar el evento click mientras que la funcion espera un valor
+      >
         Next quote
+      </button>
+
+      <button
+        disabled={ isLoading || counter === 1 }
+        className='btn btn-primary'
+        onClick={ () => reiniciar() } // si invocamos incrementar vamos a enviar el evento click mientras que la funcion espera un valor
+      >
+        First Quote
       </button>
 
     </>
