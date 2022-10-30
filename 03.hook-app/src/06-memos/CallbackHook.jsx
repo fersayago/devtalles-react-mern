@@ -8,9 +8,10 @@ const CallbackHook = () => {
 
   // guarda la funcion incluyendo el counter dentro por lo que se debe ??? sino siempre el counter sera 1
   const incrementFather = useCallback(
-    () => {
+    // recibe el argumento value del showIncrement donde se implementa la función
+    (value) => {
       // setCounter( counter + 1 )
-      setCounter((value) => value + 1)
+      setCounter((count) => count + value)
     },
     [],
   )
