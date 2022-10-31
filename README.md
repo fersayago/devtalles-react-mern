@@ -115,3 +115,20 @@ Aunque es una sección pequeña, les puede servir para desplegar infinidad de pr
 - Evaluar si existen elementos en el componente
 
 En esta sección seguiremos expandiendo todo lo que habíamos visto anteriormente en otras secciones de pruebas, pero ahora veremos más a detalle los temas y adicionalmente introduciremos nuevos conceptos y nuevos tipos de pruebas. Para orientarnos en la instalación de Jest y React testing library en el proyecto podemos usar [esta guia](https://gist.github.com/Klerith/ca7e57fae3c9ab92ad08baadc6c26177).
+
+# Sección 9: Profundizando Hooks - Generales
+**Puntos clave de la sección:**
+- Profundizar en el tema de los Hooks
+- Crear otros customHooks
+- useState
+- useCounter - Personalizado
+- useEffect y sus precauciones
+- useRef
+- useFetch - Personalizado + optimizaciones
+- useLayoutEffect
+- Memo
+- useMemo
+- useCallback
+
+Estos son los Hooks relativamente simples, aún hay mas que explicaremos más adelante, pero en esta sección nos enfocaremos en estos trabajos y para qué nos pueden servir.
+Adicionalmente estaremos dejando las bases para lo que será una sección de pruebas sumamente interesantes despues.
