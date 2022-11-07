@@ -1,24 +1,32 @@
+import { useEffect } from 'react'
 import { useReducer } from 'react'
 import TodoAdd from './components/TodoAdd'
 import TodoList from './components/TodoList'
 import todoReducer from './todoReducer'
 
 const initialState = [
-  {
-    id: new Date().getTime(),
-    description: 'Recolectar la piedra del alma',
-    done: false
-  },
-  {
-    id: new Date().getTime() * 3,
-    description: 'Recolectar la piedra del poder',
-    done: false
-  }
+  // {
+  //   id: new Date().getTime(),
+  //   description: 'Recolectar la piedra del alma',
+  //   done: false
+  // }
 ]
+
+const init = () => {
+  return JSON.parse(localStorage.getItem('todos')) || [];
+}
 
 const TodoApp = () => {
 
-  const [todos, dispatchTodo] = useReducer( todoReducer, initialState )
+  const [todos, dispatchTodo] = useReducer( todoReducer, initialState, init )
+
+  useEffect(() => {
+    // no se importa ya que es una API que ya viene nativa de Javascript
+    localStorage.setItem(
+      'todos',
+      JSON.stringify( todos ) || []
+      );
+  }, [todos])
 
   const handleNewTodo = ( todo ) => {
     
