@@ -38,6 +38,15 @@ const TodoApp = () => {
     // el dispatch es la funcion que utilizamos para enviar la acción
     dispatchTodo( action );
   }
+
+  const handleDeleteTodo = ( todoId ) => {
+    const action = {
+      type: '[TODO] Delete Todo',
+      payload: todoId
+    }
+
+    dispatchTodo( action );
+  }
   
   return (
     <>
@@ -46,7 +55,7 @@ const TodoApp = () => {
 
       <div className="row">
         <div className="col-7">
-          <TodoList todos={todos} />
+          <TodoList todos={todos} onDeleteTodo={handleDeleteTodo}/>
         </div>
 
         <div className="col-5">
