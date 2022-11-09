@@ -132,3 +132,47 @@ En esta sección seguiremos expandiendo todo lo que habíamos visto anteriorment
 
 Estos son los Hooks relativamente simples, aún hay mas que explicaremos más adelante, pero en esta sección nos enfocaremos en estos trabajos y para qué nos pueden servir.
 Adicionalmente estaremos dejando las bases para lo que será una sección de pruebas sumamente interesantes despues.
+
+# Sección 10: Profundizando Hooks - useReducer
+**Puntos clave de la sección:**
+- useReducer
+- Reducers
+- Teoría de un reducer
+- Aplicación de TODOs
+- CRUD local
+
+Esta es una sección dedicada a comprender el concepto de un Reducer, el cual es sumamente importante para poder entrar a Redux o bien usar el contextAPI fácilmente
+
+## Que es un Reducer
+- Función común y corriente
+- Debe de ser una función pura
+  - No debe de tener efectos secundarios
+  - No debe de realizar tareas asíncronas
+  - Debe de retornar siempre un estado nuevo
+  - No debe de llamar localStorage o sessionStorage
+  - No debe de requerir más que una acción que puede tener un argumento
+- Debe de retornar un nuevo estado
+- Usualmente sólo recibe dos argumentos
+  - El valor inicial (initalState) y la acción a ejecutar
+
+## Funcionamiento
+
+```mermaid
+stateDiagram-v2
+  Action --> agregar
+  Action --> borrar
+  Action --> actualizar
+  agregar --> estado
+  actualizar --> estado
+  borrar --> estado
+  estado --> pagina
+  pagina --> Action
+  state Reducer {
+    direction TB
+    agregar
+    borrar
+    actualizar
+    estado
+  }
+  pagina: Página o vista
+```
