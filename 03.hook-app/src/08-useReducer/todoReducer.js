@@ -10,6 +10,16 @@ const todoReducer = ( initialState = [], action ) => {
       // filtramos para devolver un arreglo que devuelvat todos los todos salvo el que coincida con el id que mandamos como payload
 
       return initialState.filter( todo => todo.id !== action.payload );
+    case '[TODO] Toggle Todo':
+      return initialState.map(todo => {
+        if (todo.id === action.payload){
+          return {
+            ...todo,
+            done: !todo.done
+          }
+        }
+        return todo
+      })
     case 'BCD':
       throw new Error('Action.type BCD no esta implementada')
     default:
