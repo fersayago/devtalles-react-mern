@@ -1,4 +1,4 @@
 import { createContext } from 'react'
 
-export const UserContext = createContext(); //lo creamos con indefined como inicial
+export const UserContext = createContext(); //lo creamos con undefined como inicial
 
