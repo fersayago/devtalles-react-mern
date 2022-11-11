@@ -1,6 +1,6 @@
 # Sección 1: Introducción al curso
 
-[React: De cero a ( Hooks y MERN )](https://www.udemy.com/course/react-cero-experto)
+[React: De cero a experto ( Hooks y MERN )](https://www.udemy.com/course/react-cero-experto)
 
 ## Instalaciones necesarias
 - VS Code
@@ -176,3 +176,15 @@ stateDiagram-v2
   }
   pagina: Página o vista
 ```
+
+# Sección 11: Profundizando Hooks - useContext
+**Puntos clave de la sección:**
+- Context
+- Provider
+- useContext
+- React Router
+- Links y NavLinks
+- CreateContext
+- SPA ( Single Page Application )
+
+El objetivo de la sección es pricipalmente aprender sobre el Context, el Router es un valor agregado que explotaremos mucho más en las próximas secciones, pero al usar un Router, podemos explicar claramente el problema y necesidad del context.
