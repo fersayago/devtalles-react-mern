@@ -1,6 +1,16 @@
-import { Link, NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 
 const Navbar = () => {
+
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    navigate('/login', {
+      // El replace evita que la persona pueda regresar al historial anterior por que lo que hacemos es reemplazar
+      replace: true
+    })
+  }
+
   return (
     <nav className="navbar navbar-expand-sm navbar-dark bg-dark p2">
       <Link className="navbar-brand" to="/">
@@ -37,7 +47,10 @@ const Navbar = () => {
           <span className="nav-item nav-link text-primary">
             Fernando
           </span>
-          <button className="nav-item nav-link btn">
+          <button
+            className="nav-item nav-link btn"
+            onClick={handleLogout}
+          >
             Logout
           </button>
         </ul>
