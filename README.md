@@ -188,3 +188,21 @@ stateDiagram-v2
 - SPA ( Single Page Application )
 
 El objetivo de la sección es pricipalmente aprender sobre el Context, el Router es un valor agregado que explotaremos mucho más en las próximas secciones, pero al usar un Router, podemos explicar claramente el problema y necesidad del context.
+
+# Sección 12: Pruebas unitarias y de integración - Hooks
+
+# Sección 13: Bonus: Repositorio de Custom Hooks
+
+# Sección 14: HeroesApp - Single Page Application (SPA)
+**Puntos clave de la sección:**
+- SPA ( Single Page Application ) a profundidad
+- Diferentes temas en la misma aplicación aplicados a diferentes rutas
+- Multiples Routers
+- Push y Replace en el History
+- Leer argumentos por URL
+- QueryParams
+- Aplicar filtros utilizando QueryStrings
+
+En esta sección aún no haremos protección de rutas, pero dejaremos el estilo de esos componentes listos para la siguiente sección.
+
+Aqui nos enfocaremos en la funcionalidad de la aplicación suponiendo que esatmos autenticados.
