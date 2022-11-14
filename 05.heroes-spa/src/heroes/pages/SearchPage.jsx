@@ -20,15 +20,15 @@ const SearchPage = () => {
 
   const heroes = getHeroesByName(q);
 
+  const showSearch = (q.length === 0);
+  const showError = (q.length > 0) && heroes.length === 0;
+
   const {onInputChange, searchText } = useForm({
     searchText: q
   })
 
   const handleSearchSubmit = (e) => {
     e.preventDefault()
-
-    if ( searchText.trim().length <= 1 ) return;
-
     navigate(`?q=${ searchText }`)
   }
   
@@ -60,10 +60,17 @@ const SearchPage = () => {
         <div className="col-7">
           <h4>Results</h4>
           <hr />
-          <div className="alert alert-primary">
-            Search a hero
+          {/* {
+            (q === '')
+            ? <div className="alert alert-primary">Search a hero</div>
+            : (heroes.length === 0) &&
+              <div className="alert alert-danger">No hero with <b>{ q }</b></div>
+            
+          } */}
+          <div className="alert alert-primary" style={{ display: showSearch ? '' : 'none'}}>
+          Search a hero
           </div>
-          <div className="alert alert-danger">
+          <div className="alert alert-danger" style={{ display: showError ? '' : 'none' }}>
             No hero with <b>{ q }</b>
           </div>
           {
