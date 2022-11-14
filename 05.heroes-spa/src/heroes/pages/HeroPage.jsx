@@ -1,3 +1,4 @@
+import { useMemo } from "react"
 import { Navigate, useNavigate, useParams } from "react-router-dom"
 import { getHeroById } from "../helpers"
 
@@ -7,7 +8,9 @@ const HeroPage = () => {
 
   const navigate = useNavigate()
 
-  const hero = getHeroById( heroId );
+  // podemos usar useMemo para memorizar los valores ya que si hay un rerender se volveran a cargar los valores
+  // cuando el Id cambie, se va a vovler a disparar la función
+  const hero = useMemo(() => getHeroById( heroId ), [ heroId ]);
 
   const handleNavigateBack = () => {
     // regresa un paso atras en el historial
