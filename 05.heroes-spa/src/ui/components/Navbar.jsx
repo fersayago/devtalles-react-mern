@@ -1,10 +1,16 @@
+import { useContext } from "react";
 import { Link, NavLink, useNavigate } from "react-router-dom";
+import { AuthContext } from "../../auth/context";
 
 const Navbar = () => {
 
+  const { user, logout } = useContext(AuthContext)
   const navigate = useNavigate();
 
   const handleLogout = () => {
+
+    logout()
+
     navigate('/login', {
       // El replace evita que la persona pueda regresar al historial anterior por que lo que hacemos es reemplazar
       replace: true
@@ -45,7 +51,9 @@ const Navbar = () => {
       <div className="navbar-collapse collapse w-100 order-3 dual-collapse2 d-flex justify-content-end">
         <ul className="navbar-nav ml-auto">
           <span className="nav-item nav-link text-primary">
-            Fernando
+            {
+              user?.name
+            }
           </span>
           <button
             className="nav-item nav-link btn"

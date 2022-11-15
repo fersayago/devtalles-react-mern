@@ -206,3 +206,14 @@ El objetivo de la sección es pricipalmente aprender sobre el Context, el Router
 En esta sección aún no haremos protección de rutas, pero dejaremos el estilo de esos componentes listos para la siguiente sección.
 
 Aqui nos enfocaremos en la funcionalidad de la aplicación suponiendo que esatmos autenticados.
+
+# Sección 15: Protección de Rutas
+**Puntos clave de la sección:**
+- Rutas públicas
+- Rutas privadas
+- Login y logout - Sin backend aún
+- Recordar cuál fue la última ruta visitada para mejorar la experiencia de usuario.
+- Context
+- Reducer
+
+Esta es una sección pequeña pero importante para trabajar las bases de la autenticación y protección de nuestra aplicación.
