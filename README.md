@@ -192,6 +192,14 @@ El objetivo de la sección es pricipalmente aprender sobre el Context, el Router
 # Sección 12: Pruebas unitarias y de integración - Hooks
 
 # Sección 13: Bonus: Repositorio de Custom Hooks
+**Puntos clave de la sección:**
+- Subir código a nuestro repositorio
+- Tener un listado de customHooks y código que podemos reutilizar
+- Una idea para mantener tu repositorio ordenado con ejemplos
+
+No es una secicón obligatoria, pero puede ayudarles a tener su código ordenado y fácil de utilizar en proyectos futuros.
+
+[Repositorio con Custom Hooks](https://github.com/fersayago/custom-hooks)
 
 # Sección 14: HeroesApp - Single Page Application (SPA)
 **Puntos clave de la sección:**
