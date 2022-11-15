@@ -4,10 +4,13 @@ import { AuthContext } from "../../auth/context";
 
 const Navbar = () => {
 
-  const { user } = useContext(AuthContext)
+  const { user, logout } = useContext(AuthContext)
   const navigate = useNavigate();
 
   const handleLogout = () => {
+
+    logout()
+
     navigate('/login', {
       // El replace evita que la persona pueda regresar al historial anterior por que lo que hacemos es reemplazar
       replace: true
