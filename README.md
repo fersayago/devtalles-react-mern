@@ -225,3 +225,14 @@ Aqui nos enfocaremos en la funcionalidad de la aplicación suponiendo que esatmo
 - Reducer
 
 Esta es una sección pequeña pero importante para trabajar las bases de la autenticación y protección de nuestra aplicación.
+
+# Sección 16: Pruebas de nuestra aplicación de Heroes
+
+# Sección 17: JournalApp - MaterialUI - Estructura y Diseño
+**Puntos clave de la sección:**
+- Material UI
+- Diferentes componentes de material
+- Uso de funciones propias de MaterialUI
+- Configuración de temas personalizados
+
+En esta sección vamos a crear una aplicación de diario que nos permite cargar notas por dia con titulo, texto, imagen y fecha. Se puede acceder a la misma mediante el uso de usuario y contraseña o una cuenta de Google.
