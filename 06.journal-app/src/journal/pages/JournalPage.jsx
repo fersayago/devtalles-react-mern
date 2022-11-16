@@ -1,8 +1,11 @@
 import React from 'react'
+import { Typography } from '@mui/material'
 
 const JournalPage = () => {
   return (
-    <div>JournalPage</div>
+    <>
+      <Typography variant='h1'>JournalPage</Typography>
+    </>
   )
 }
 
