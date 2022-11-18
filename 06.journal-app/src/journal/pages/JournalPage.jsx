@@ -1,13 +1,11 @@
 import React from 'react'
-import { Typography } from '@mui/material'
 import JournalLayout from '../layout/JournalLayout'
-import { NothingSelectedView } from '../views'
+import { NothingSelectedView, NoteView } from '../views'
 
 const JournalPage = () => {
   return (
     <JournalLayout>
-      <NothingSelectedView />
-      {/* NoteView */}
+      <NoteView />
     </JournalLayout>
   )
 }
