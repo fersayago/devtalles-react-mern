@@ -191,6 +191,12 @@ El objetivo de la sección es pricipalmente aprender sobre el Context, el Router
 
 # Sección 12: Pruebas unitarias y de integración - Hooks
 
+- Pruebas sobre Hooks y CustomHooks
+
+Ese es el tema principal, demostrar cómo podemos evaluar cada unos de los hooks aplicados anteriormente con sus casos reales de uso.
+
+Hay varios extras, como la prueba de un Reducer, que realmente no es nada complicado, también quiero aclarar qué nos toca evaluar a nosotros y qué no es responsabilidad nuestra.
+
 # Sección 13: Bonus: Repositorio de Custom Hooks
 **Puntos clave de la sección:**
 - Subir código a nuestro repositorio
