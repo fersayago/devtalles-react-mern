@@ -34,9 +34,28 @@ describe('Pruebas en el todoReducer', () => {
 
   test('debe de eliminar un todo', () => {
 
+    const action = {
+      type: '[TODO] Delete Todo',
+      payload: 1
+    }
+
+    const newState = todoReducer( initialState, action )
+
+    expect( newState.length ).toBe( 0 )
+    expect( newState ).not.toContain( initialState[0] )
   })
 
   test('debe de realizar el cambio del todo', () => {
 
+    const action = {
+      type: '[TODO] Toggle Todo',
+      payload: 1
+    }
+
+    const newState = todoReducer( initialState, action )
+    expect( newState[0].done ).toBe( true )
+
+    const newerState = todoReducer( newState, action)
+    expect( newerState[0].done ).toBe( false )
   })
 })
