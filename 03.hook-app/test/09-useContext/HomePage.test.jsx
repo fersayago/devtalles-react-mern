@@ -32,7 +32,6 @@ describe('Pruebas en <HomePage />', () => {
     )
 
     const preTag = screen.getByLabelText('pre')
-    console.log(preTag.innerHTML)
     expect( preTag.innerHTML ).toContain( user.nombre )
     expect( preTag.innerHTML ).toContain( user.hola )
   })
