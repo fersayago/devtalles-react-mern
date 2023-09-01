@@ -242,3 +242,47 @@ Esta es una sección pequeña pero importante para trabajar las bases de la aute
 - Configuración de temas personalizados
 
 En esta sección vamos a crear una aplicación de diario que nos permite cargar notas por dia con titulo, texto, imagen y fecha. Se puede acceder a la misma mediante el uso de usuario y contraseña o una cuenta de Google.
+
+# Sección 18: Redux - Que es y conceptos / React Redux
+**Puntos clave de la sección:**
+- Redux
+- Store
+- Middlewares
+- Dispatch
+- Actions
+- State
+- Acciones asíncronas
+- RTK Query
+- Redux Toolkit
+- Slices
+
+Es una sección sumamente pequeña, pero quiero darles una explicación teórica sobre Redux antes de entrar en él, pero la ventaja es que para estas alturas, ya deberíamos de saber sobre el Reducer, el cual es el corazón del Redux, por consecuencia aprender Redux en este instante debería ser más fácil!
+
+## Funcionamiento de Redux
+```mermaid
+stateDiagram-v2
+View --> Actions
+Actions --> Dispatcher
+Middlewares --> API
+API --> Middlewares
+Dispatcher --> Reducer
+Reducer --> statte
+statte --> View
+View
+Actions
+direction LR{
+    state Dispatcher {
+    Middlewares
+    }
+    state Store {
+        direction TB
+        state Reducer{
+            direction LR
+            reducer1
+            Reducer2
+            reducer3
+        }
+        statte
+    }
+
+```
