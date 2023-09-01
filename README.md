@@ -286,3 +286,17 @@ direction LR{
     }
 
 ```
+
+# Sección 19: Introducción a Redux y autenticación en Firestore
+**Puntos clave de la sección:**
+- Redux aplicado en nuestro proyecto
+- Firebase
+- Firestore
+- Redux Devtools
+- Thunk
+- Formularios
+- Google SignIn
+- Acciones Asíncronas
+- Mantener el estado de la autenticación
+
+En esta sección configramos Redux en el proyecto de JournalApp, aplicado al inicio en la parte de la autenticación y mantener el estado de la misma a lo largo de toda la aplicación.
