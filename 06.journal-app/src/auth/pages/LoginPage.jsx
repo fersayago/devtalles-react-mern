@@ -1,13 +1,37 @@
+import { useDispatch } from 'react-redux'
 import { Link as RouterLink } from 'react-router-dom'
 import { Button, Grid, Link, TextField, Typography } from "@mui/material"
 import { Google } from "@mui/icons-material"
 
+import { checkingAuthentication, startGoogleSignIn } from '../../store/auth'
 import { AuthLayout } from './../layout'
+import { useForm } from '../../hooks/'
 
 const LoginPage = () => {
+
+  const dispatch = useDispatch()
+
+  const { email, password, onInputChange } = useForm({
+    email: 'sayago.fernando@gmail.com',
+    password: '123456'
+  })
+
+  const onSubmit = (event) => {
+    event.preventDefault();
+
+    dispatch(checkingAuthentication())
+
+    console.log({ email, password });
+  }
+
+  const onGoogleSignIn = () => {
+    console.log('onGoogleSignIn')
+    dispatch(startGoogleSignIn())
+  }
+
   return (
     <AuthLayout title='Login'>
-      <form>
+      <form onSubmit={onSubmit}>
         <Grid container>
 
           <Grid item xs={ 12 } sx={{ mt: 2}}>
@@ -15,6 +39,9 @@ const LoginPage = () => {
               label='Correo'
               type='email'
               placeholder='example@email.com'
+              name='email'
+              value={ email }
+              onChange={ onInputChange }
               fullWidth
             />
           </Grid>
@@ -23,6 +50,9 @@ const LoginPage = () => {
               label='Contraseña'
               type='password'
               placeholder='password'
+              name='password'
+              value={ password }
+              onChange={ onInputChange }
               fullWidth
             />
           </Grid>
@@ -33,7 +63,7 @@ const LoginPage = () => {
               xs={ 12 }
               sm={ 6 }
             >
-              <Button variant='contained' fullWidth>
+              <Button type='submit' variant='contained' fullWidth>
                 Login
               </Button>
             </Grid>
@@ -43,7 +73,7 @@ const LoginPage = () => {
               xs={ 12 }
               sm={ 6 }
             >
-              <Button variant='contained' fullWidth>
+              <Button onClick={ onGoogleSignIn } variant='contained' fullWidth>
                 <Google />
                 <Typography sx={{ml: 1}}>Google</Typography>
               </Button>
