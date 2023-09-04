@@ -2,11 +2,27 @@ import { Link as RouterLink } from 'react-router-dom'
 import { Button, Grid, Link, TextField, Typography } from "@mui/material"
 
 import { AuthLayout } from "../layout"
+import { useForm } from '../../hooks'
+
+const formData = {
+  email: 'sayago.fernando@gmail.com',
+  password: '123456',
+  displayName: 'Fernando Sayago'
+}
 
 const RegisterPage = () => {
+
+  const { displayName, email, password, onInputChange, formState } = useForm(formData)
+
+  const onSubmit = (event) => {
+    event.preventDefault()
+
+    console.log(formState);
+  }
+
   return (
     <AuthLayout title='Register'>
-      <form>
+      <form onSubmit={ onSubmit }>
         <Grid container>
 
           <Grid item xs={ 12 } sx={{ mt: 2}}>
@@ -15,6 +31,9 @@ const RegisterPage = () => {
               type='text'
               placeholder='Nombre completo'
               fullWidth
+              name='displayName'
+              value={ displayName }
+              onChange={ onInputChange }
             />
           </Grid>
           <Grid item xs={ 12 } sx={{ mt: 2}}>
@@ -23,6 +42,9 @@ const RegisterPage = () => {
               type='email'
               placeholder='example@email.com'
               fullWidth
+              name='email'
+              value={ email }
+              onChange={ onInputChange }
             />
           </Grid>
           <Grid item xs={ 12 } sx={{ mt: 2}}>
@@ -31,6 +53,9 @@ const RegisterPage = () => {
               type='password'
               placeholder='password'
               fullWidth
+              name='password'
+              value={ password }
+              onChange={ onInputChange }
             />
           </Grid>
 
@@ -39,7 +64,7 @@ const RegisterPage = () => {
               item
               xs={ 12 }
             >
-              <Button variant='contained' fullWidth>
+              <Button variant='contained' type='submit' fullWidth>
                 Crear cuenta
               </Button>
             </Grid>
