@@ -29,6 +29,8 @@ const RegisterPage = () => {
     emailValid,
   } = useForm(formData, formValidations)
 
+  console.log(displayNameValid);
+
   const onSubmit = (event) => {
     event.preventDefault()
 
