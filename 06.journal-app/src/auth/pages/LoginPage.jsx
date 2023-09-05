@@ -25,8 +25,6 @@ const LoginPage = () => {
     event.preventDefault();
 
     dispatch(checkingAuthentication())
-
-    console.log({ email, password });
   }
 
   const onGoogleSignIn = () => {
