@@ -46,7 +46,7 @@ export const registerUserWithEmailPassword = async({ email, password, displayNam
 
     console.log(resp)
   } catch (error) {
-    console.log(error)
+    // console.log(error)
     return { ok: false, errorMessage: error.message }
   }
 }
